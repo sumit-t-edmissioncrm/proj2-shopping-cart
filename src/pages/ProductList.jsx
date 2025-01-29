@@ -15,7 +15,8 @@ function ProductList() {
             Our Products
           </h2>
         </div>
-        <div className="grid grid-cols-2 gap-5 mt-10 lg:mt-16 lg:gap-8 lg:grid-cols-4">
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mt-10 lg:mt-16 lg:gap-8">
           {productList && productList.length > 0 ? (
             productList.map((singleProductTile) => (
               <ProductTile
@@ -24,7 +25,7 @@ function ProductList() {
               />
             ))
           ) : (
-            <h3>No Products Found!</h3>
+            <h3 className="text-center text-gray-600">No Products Found!</h3>
           )}
         </div>
       </div>
